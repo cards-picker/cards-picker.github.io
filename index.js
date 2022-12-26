@@ -30,15 +30,6 @@ const cardElts = Array.from(document.getElementsByClassName('card'))
 pickCards()
 
 function clickCard(card) {
-    cards = cards.filter(item => item.toString() !== card.id)
-    if (cards.length >= 3) {
-        pickCards()
-    } else {
-        noMoreCards()
-    }
-}
-
-function noMoreCards() {
-    document.getElementById('no-more-cards').hidden = false
-    cardElts.map( card => card.hidden = true)
+    // TODO: show if it's the best card between the 3 ones
+    pickCards()
 }
