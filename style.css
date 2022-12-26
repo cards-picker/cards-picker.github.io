@@ -1,0 +1,22 @@
+body
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card
+{
+    width: 20%;
+    aspect-ratio: 1/1.5;
+    cursor: pointer;
+}
+
+.card:hover
+{
+    opacity: 0.7;
+}
+
+#no-more-cards
+{
+    font-size: 2em;
+}
