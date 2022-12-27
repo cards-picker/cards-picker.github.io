@@ -16,7 +16,7 @@ function uniqueRandomsInArray(howMany, array) {
 }
 
 function pickCards() {
-    const pickedCards = uniqueRandomsInArray(3, cards)
+    pickedCards = uniqueRandomsInArray(3, cards)
 
     cardElts.forEach( (cardElt, index) => {
         cardElt.id = pickedCards[index]
@@ -25,11 +25,18 @@ function pickCards() {
 }
 
 let cards = range(16, 1)
+let pickedCards = []
 const cardElts = Array.from(document.getElementsByClassName('card'))
 
 pickCards()
 
 function clickCard(card) {
-    // TODO: show if it's the best card between the 3 ones
+    const isBestCard = pickedCards.every( c => c >= parseInt(card.id) )
+
+    if (isBestCard) {
+        document.getElementById('message').textContent = 'Tu as choisi la meilleure des trois cartes'
+    } else {
+        document.getElementById('message').textContent = "Tu n'as pas choisi la meilleure des trois cartes"
+    }
     pickCards()
 }

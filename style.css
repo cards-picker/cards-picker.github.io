@@ -1,4 +1,4 @@
-body
+#cards-container
 {
     display: flex;
     justify-content: space-around;
@@ -11,12 +11,8 @@ body
     cursor: pointer;
 }
 
-.card:hover
+#message
 {
-    opacity: 0.7;
-}
-
-#no-more-cards
-{
-    font-size: 2em;
+    font-size: 3em;
+    text-align: center;
 }
